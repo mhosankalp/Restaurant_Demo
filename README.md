@@ -14,13 +14,16 @@ To install PyDP, use the PyPI package manager:
 pip install python-dp
 (If you have pip3 separately for Python 3.x, use pip3 install python-dp.)
 
-Navigate to `PyDP/examples/restaurant_demo` folder. Run restaurant.py
+Navigate to `PyDP/examples/restaurant_demo` folder. Execute `Python restaurant.py`
 
 The output will display Private and Non-Private counts for:
 * Count visits by hour of day
 * Count visits by day of week
 * Sum-up revenue per day of the week
-* Sum-up revenue per week day (multiple visits per day)
+* Sum-up revenue per day of the week with preaggregation
+
+Non Private Count is the raw counts and output
+Private count is anonymized Counts and output using Differential Privacy library
 
 ## Count visits by hour of day
 
@@ -34,8 +37,6 @@ Visit data for a single day is stored in the `day_data.csv` file. It includes
 the visitor’s ID, the visit duration (in minutes), and the money spent at the
 restaurant.
 
-Non Private Count is the raw counts and output
-Private count is anonymized Counts and output using Differential Privacy library
 
 This triggers the logic of `CountVisitsPerHour`. It reads the daily statistics
 and calculates the number of visitors that entered the restaurant every hour of
@@ -94,7 +95,7 @@ Next, we analyse for the remaining three cases:
 
 * Count visits by day of week
 * Sum-up revenue per day of the week
-* Sum-up revenue per week day (multiple visits per day)
+* Sum-up revenue per day of the week with preaggregation
 
 ## Count visits by day of week
 
@@ -213,7 +214,7 @@ LN_3 = math.log(3)
 ### Clamping individual contributions
 
 The usage of `SUM_MAX_CONTRIBUTED_DAYS` in `BoundedSum` is similar to its usage
-in `Count``(COUNT_MAX_CONTRIBUTED_DAYS)`, which is explained in the previous example. This section focuses on
+in `Count (COUNT_MAX_CONTRIBUTED_DAYS)`, which is explained in the previous example. This section focuses on
 the *lower* and *upper* bounds. The parameters `MIN_EUROS_SPENT` and `MAX_EUROS_SPENT_1` of
 `BoundedSum` define the *contribution caps*. Every input value will be
 automatically clamped to the specified bounds. This is needed for calculating
