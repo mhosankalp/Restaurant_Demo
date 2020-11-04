@@ -8,7 +8,7 @@ restaurant and how much time and money they spend there. To ensure that
 visitors' privacy is preserved, Alice decides to use the Differential Privacy
 library.
 
-### Installation
+## Installation
 To install PyDP, use the PyPI package manager:
 
 pip install python-dp
