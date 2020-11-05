@@ -1,4 +1,4 @@
-# Example using the Differential Privacy Library
+# Example using the Differential Privacy Library PyDp
 
 ## Restaurant
 
