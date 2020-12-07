@@ -11,10 +11,12 @@ library in this case PyDP library.
 
 Alice wants to share the information with potential clients which include 3 main scenarios in total.
 
-* Count visits by an hour of the day: Count how many visitors enter the restaurant at every hour of a particular day.
-* Count visits by day of the week: Count how many visitors enter the restaurant each day in a week. This includes two cases:
-    * Sum-up revenue per day of the week: Calculate the sum of the restaurant revenue per weekday.
-    * Sum-up revenue per day of the week with preaggregation
+```
+Count visits by an hour of the day: Count how many visitors enter the restaurant at every hour of a particular day.
+Count visits by day of the week: Count how many visitors enter the restaurant each day in a week. This includes two cases:
+Sum-up revenue per day of the week: Calculate the sum of the restaurant revenue per weekday.
+Sum-up revenue per day of the week with preaggregation
+```
     
 Both the Non-private and the Private values for the above cases are calculated down below along with the graphical representation of the results and their comparisons.
 
